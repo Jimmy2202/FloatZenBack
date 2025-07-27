@@ -9,7 +9,15 @@ import spotifyRouter from "./routes/spotify.js";
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); // Permite chamadas do frontend
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://jimmy2202.github.io/FloatZenFront/",
+    ],
+    credentials: true,
+  })
+); // Permite chamadas do frontend
 app.use(express.json());
 
 app.use(
