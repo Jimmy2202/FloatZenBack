@@ -107,7 +107,7 @@ const createUser = async (email, password) => {
         from: process.env.EMAIL_USER,
         to: email,
         subject: "Verifique sua conta",
-        html: `<a href="https://jimmy2202.github.io/FloatZenFront/api/auth/verify/${verifyToken}">Clique aqui para verificar sua conta</a>`,
+        html: `<a href="https://floatzenback.onrender.com/api/auth/verify/${verifyToken}">Clique aqui para verificar sua conta</a>`,
       });
     }
 
