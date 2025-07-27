@@ -107,7 +107,7 @@ const createUser = async (email, password) => {
         from: process.env.EMAIL_USER,
         to: email,
         subject: "Verifique sua conta",
-        html: `<a href="http://localhost:5000/api/auth/verify/${verifyToken}">Clique aqui para verificar sua conta</a>`,
+        html: `<a href="https://jimmy2202.github.io/FloatZenFront//api/auth/verify/${verifyToken}">Clique aqui para verificar sua conta</a>`,
       });
     }
 
@@ -132,7 +132,7 @@ router.get("/verify/:token", async (req, res) => {
     "UPDATE users SET verified = true, verify_token = NULL WHERE id = ?",
     [rows[0].id]
   );
-  res.redirect("http://localhost:5173/login?verified=true");
+  res.redirect("https://jimmy2202.github.io/FloatZenFront/login?verified=true");
 });
 
 router.post("/register", async (req, res) => {
@@ -250,7 +250,7 @@ router.post("/forgot-password", async (req, res) => {
     from: process.env.EMAIL_USER,
     to: email,
     subject: "Recuperação de Senha :)",
-    html: `<a href="http://localhost:5173/reset/${token}">Clique aqui para redefinir sua senha</a>`,
+    html: `<a href="https://jimmy2202.github.io/FloatZenFront/reset/${token}">Clique aqui para redefinir sua senha</a>`,
   });
 
   res.json({ success: true, message: "Email de recuperação enviado!" });
