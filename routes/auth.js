@@ -132,7 +132,9 @@ router.get("/verify/:token", async (req, res) => {
     "UPDATE users SET verified = true, verify_token = NULL WHERE id = ?",
     [rows[0].id]
   );
-  res.redirect("https://jimmy2202.github.io/FloatZenFront/login?verified=true");
+  res.redirect(
+    "https://jimmy2202.github.io/FloatZenFront/#/login?verified=true"
+  );
 });
 
 router.post("/register", async (req, res) => {
@@ -250,7 +252,7 @@ router.post("/forgot-password", async (req, res) => {
     from: process.env.EMAIL_USER,
     to: email,
     subject: "Recuperação de Senha :)",
-    html: `<a href="https://jimmy2202.github.io/FloatZenFront/reset/${token}">Clique aqui para redefinir sua senha</a>`,
+    html: `<a href="https://jimmy2202.github.io/FloatZenFront/#/reset/${token}">Clique aqui para redefinir sua senha</a>`,
   });
 
   res.json({ success: true, message: "Email de recuperação enviado!" });
