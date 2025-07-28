@@ -14,7 +14,6 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://jimmy2202.github.io",
-      "https://jimmy2202.github.io/FloatZenFront/",
     ],
     credentials: true,
   })
