@@ -629,7 +629,8 @@ const fetch_tracks = async (track, token) => {
 
 const fetch_episodes = async (query, token) => {
   if (query == "Ansiedade") {
-    query = "podcast%20sobre%20ansiedade%20dicas%20para%20ansiedade";
+    query =
+      "podcast%20sobre%20ansiedade%20dicas%20para%20melhorar%20ansiedade%20terapia%20relaxamento";
   } else if (query == "Foco") {
     query =
       "podcast%20sobre%20foco%20dicas%20para%20melhorar%20o%20foco%20sons%20para%20foco";
