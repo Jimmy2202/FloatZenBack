@@ -16,6 +16,7 @@ async function fetchPrompt(prompt) {
         Eu gostaria que você lesse esse texto e retornasse um array de cinco objetos literais em js com:
         artista:, musica:.
         Esse array são de 5 recomendações que você daria para o usuário de acordo com o que ele pediu.
+        Qualquer coisa que vá ferir a lei de proteção de dados, dados sensíveis, dados sem valor ou dados agressivos, retorne 5 musicas aleatórias.
         Cada faixa com um artista diferente e sons diferentes que tem a ver com os detalhes do usuário.
         Ah, se a pessoa escrever uma banda ou artista pela metade ou escrever errado, como ao invés de Avenged Sevenfold, a pessoa
         escrever apenas Avenged, ou a pessoa escrever Panic At the Disco e escrever só Panic, complete para ela por favor e corrija por ela, se possível.
